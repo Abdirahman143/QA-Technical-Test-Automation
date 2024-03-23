@@ -1,14 +1,16 @@
+import "../commands";
+
 class HomePage {
-  logo = () => cy.xpath(`//img[contains(@src, "Blue-Logo.png")]`);
-  personalBankMenu = () => `//a[contains(text(), "Personal Banking")]`;
-  creditCardMenu = () => `//a[contains(text(),"Credit Cards")]`;
+  logo = ".navbar-brand img";
+  
 
   isLogoVisible = () => {
-    this.logo().should("be.visible");
+    cy.get(this.logo).should("be.visible");
   };
 
-  navigateToCreditCard = () => {
-    cy.xpath(this.personalBankMenu()).trigger("mouseover");
-    cy.xpath(this.creditCardMenu()).click();
+  navigateToCreditCard = (relativeUrl) => {
+    cy.url().should("include", relativeUrl);
   };
 }
+
+export default new HomePage();
