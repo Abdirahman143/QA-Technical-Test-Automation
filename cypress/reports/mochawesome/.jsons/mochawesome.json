@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-23T09:13:02.440Z",
+    "end": "2024-03-23T09:13:24.183Z",
+    "duration": 21743,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b7b6d27-167c-48dc-82ad-04f8824988c6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\card\\GoldenCreditCard.cy.js",
+      "file": "cypress\\e2e\\card\\GoldenCreditCard.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa847959-a381-49f0-940c-4f2c73d66151",
+          "title": "Golden Credit Card Test: ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify that the home page logo is visible ",
+              "fullTitle": "Golden Credit Card Test:  verify that the home page logo is visible ",
+              "timedOut": null,
+              "duration": 5288,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.isLogoVisible();",
+              "err": {},
+              "uuid": "881fa72f-fec1-4563-8e44-db44456d24c5",
+              "parentUUID": "aa847959-a381-49f0-940c-4f2c73d66151",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify that user can navigate to the credit card page",
+              "fullTitle": "Golden Credit Card Test:  verify that user can navigate to the credit card page",
+              "timedOut": null,
+              "duration": 4830,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(url_data.url + common_data.relativeUrl);\n_HomePage.default.navigateToCreditCard(common_data.relativeUrl);\n_commonCard.default.isHeaderDisplayed(common_data.header);",
+              "err": {},
+              "uuid": "cbec5b77-11bb-4a44-a347-8ca49009ea07",
+              "parentUUID": "aa847959-a381-49f0-940c-4f2c73d66151",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify that user can navigate to im-visa-international-gold-card",
+              "fullTitle": "Golden Credit Card Test:  verify that user can navigate to im-visa-international-gold-card",
+              "timedOut": null,
+              "duration": 4206,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(golden_credit_card.url);\n_GoldenCreditCard.default.isHeaderDisplayed(golden_credit_card.header);",
+              "err": {},
+              "uuid": "40112643-001c-4955-ad2d-3ad8a80438d2",
+              "parentUUID": "aa847959-a381-49f0-940c-4f2c73d66151",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that user can scroll down to terms and condition section and expand ",
+              "fullTitle": "Golden Credit Card Test:  Verify that user can scroll down to terms and condition section and expand ",
+              "timedOut": null,
+              "duration": 134,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//scroll down to terms section\n_CardTerms.default.scrollToTermsAndConditions();\n//expand the terms section\n_CardTerms.default.clickTermsAndConditions();",
+              "err": {},
+              "uuid": "9c7b846c-a90d-4f24-848b-280a68ef8347",
+              "parentUUID": "aa847959-a381-49f0-940c-4f2c73d66151",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify some terms content exist in the page ",
+              "fullTitle": "Golden Credit Card Test:  verify some terms content exist in the page ",
+              "timedOut": null,
+              "duration": 28,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CardTerms.default.isTermsAndConditionsDisplayed(golden_credit_card.termsAndConditionsContent_1);",
+              "err": {},
+              "uuid": "6c39cc67-5d96-4f90-9c9d-c0451c945f08",
+              "parentUUID": "aa847959-a381-49f0-940c-4f2c73d66151",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify user can scroll to Card form section",
+              "fullTitle": "Golden Credit Card Test:  verify user can scroll to Card form section",
+              "timedOut": null,
+              "duration": 17,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CardForm.default.scrollToForm();",
+              "err": {},
+              "uuid": "a40e39a9-d213-4d29-8baf-f6ee87872a69",
+              "parentUUID": "aa847959-a381-49f0-940c-4f2c73d66151",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify user can fill all the required fields",
+              "fullTitle": "Golden Credit Card Test:  verify user can fill all the required fields",
+              "timedOut": null,
+              "duration": 2618,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CardForm.default.fillForm(golden_credit_card.fullName, golden_credit_card.email, golden_credit_card.phone, golden_credit_card.branchName, golden_credit_card.message);",
+              "err": {},
+              "uuid": "6a4c77db-2338-426a-88ab-214930b6f459",
+              "parentUUID": "aa847959-a381-49f0-940c-4f2c73d66151",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "881fa72f-fec1-4563-8e44-db44456d24c5",
+            "cbec5b77-11bb-4a44-a347-8ca49009ea07",
+            "40112643-001c-4955-ad2d-3ad8a80438d2",
+            "9c7b846c-a90d-4f24-848b-280a68ef8347",
+            "6c39cc67-5d96-4f90-9c9d-c0451c945f08",
+            "a40e39a9-d213-4d29-8baf-f6ee87872a69",
+            "6a4c77db-2338-426a-88ab-214930b6f459"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17121,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\mochawesome\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
