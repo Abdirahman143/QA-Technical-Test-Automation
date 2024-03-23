@@ -1,5 +1,9 @@
 import HomePage from "../../support/pageObjects/HomePage";
+import commonCard from "../../support/pageObjects/creditCards/commonCard";
+import GoldenCreditCard from "../../support/pageObjects/creditCards/GoldenCreditCard";
 const url_data = require("../../fixtures/test_data/endpoint.json");
+const common_data = require("../../fixtures/test_data/card_common_data.json");
+const golden_credit_card = require("../../fixtures/test_data/goldenCard.json")
 
 describe("Credit Card Test: ", { testIsolation: false }, () => {
   before(() => {
@@ -14,8 +18,37 @@ describe("Credit Card Test: ", { testIsolation: false }, () => {
   });
 
   it("verify that user can navigate to the credit card page", () => {
-    const relativeUrl = "personal/cards/credit-cards/";
-    cy.visit(url_data.url + relativeUrl);
-    HomePage.navigateToCreditCard(relativeUrl);
+    cy.visit(url_data.url + common_data.relativeUrl);
+    HomePage.navigateToCreditCard(common_data.relativeUrl);
+    commonCard.isHeaderDisplayed(common_data.header);
   });
+
+  //Golden Credit test
+
+  //navigate to Golden credit card and verify the header
+
+  it("verify that user can navigate to golden credit page",() => {
+    cy.visit(golden_credit_card.url);
+    GoldenCreditCard.isHeaderDisplayed(golden_credit_card.header);
+  });
+
+
+  //terms and condition section- verify some terms content 
+  it("Verify that user can scroll down to terms and condition section and expand ", () => {
+   //scroll down to terms section
+     GoldenCreditCard.scrollToTermsAndConditions();
+     //expand the terms section
+     GoldenCreditCard.clickTermsAndConditions();
+  });
+
+  it("verify some terms content exist in the page ", () => {
+    GoldenCreditCard.isTermsAndConditionsDisplayed(
+      golden_credit_card.termsAndConditionsContent_1
+    );
+   
+  });
+
+
+
+  
 });
